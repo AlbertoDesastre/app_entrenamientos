@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
+import NavMenu from './modules/common/NavMenu/NavMenu.vue'
 </script>
 
 <template>
   <nav>
-    <RouterLink to="/">Home</RouterLink>
+    <NavMenu />
   </nav>
 
   <RouterView />
