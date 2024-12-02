@@ -1,0 +1,85 @@
+.header-menu {
+  width: 100%;
+}
+
+.header-menu,
+.dropdown {
+  background-color: #f5e663;
+}
+
+.header-menu,
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #032b43;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#profile-icon {
+  margin-right: 10px;
+}
+
+#profile-icon img {
+  border-radius: 50%;
+}
+
+/* Le tengo que dar un tamaño fijo porque si no al hacer los align/justify del flex el contenedor desaparece */
+.burger-menu-mobile {
+  min-width: 30px;
+  min-height: 30px;
+}
+
+@media (max-width: 720px) {
+  /* Aquí se maneja el menú de hamburguesa para dispositivos móviles.
+  Si estamos en un dispositivo pequeñito, en vez de salir todos los links, saldrá
+  la imagen de la hamburguesa y al hacer hover se despliegan todas las opciones */
+
+  .burger-menu-mobile a {
+    display: none;
+  }
+
+  .burger-menu-mobile {
+    background-image: url('./../../../assets/imgs/burger-icon.png');
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 5px;
+  }
+
+  .burger-menu-mobile:hover,
+  .burger-menu-mobile:hover a {
+    background-image: none;
+    display: block;
+  }
+
+  /* Dropdown, animaciones y demás */
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+    position: absolute;
+    transform: translateX(-6em);
+  }
+
+  .dropdown li {
+    border-top: 1px solid #8d99ae;
+  }
+
+  .dropdown li:first-child {
+    border-top: none;
+  }
+
+  .dropdown a {
+    margin: 7px;
+  }
+
+  .burger-menu-mobile:hover .dropdown {
+    transform: translateX(-0.5em);
+    transition: all 0.3s ease-in;
+  }
+}
