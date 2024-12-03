@@ -1,3 +1,4 @@
+/* Estilos comunes tanto para la versión desktop como mobile */
 .header-menu {
   width: 100%;
 }
@@ -28,40 +29,50 @@ nav {
   border-radius: 50%;
 }
 
-/* Le tengo que dar un tamaño fijo porque si no al hacer los align/justify del flex el contenedor desaparece */
-.burger-menu-mobile {
-  min-width: 30px;
-  min-height: 30px;
+/* Estilos exclusivos para el menú en su versión desktop */
+.important-links-container ul {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  gap: 1rem;
 }
 
-@media (max-width: 720px) {
-  /* Aquí se maneja el menú de hamburguesa para dispositivos móviles.
+/* Aquí se maneja el menú de hamburguesa para dispositivos móviles.
   Si estamos en un dispositivo pequeñito, en vez de salir todos los links, saldrá
   la imagen de la hamburguesa y al hacer hover se despliegan todas las opciones */
-
-  .burger-menu-mobile a {
-    display: none;
+/* Le tengo que dar un tamaño fijo porque si no al hacer los align/justify del flex el contenedor desaparece */
+@media (max-width: 720px) {
+  .important-links-container ul {
+    gap: 0rem;
+    flex-direction: column;
   }
 
   .burger-menu-mobile {
     background-image: url('./../../../assets/imgs/burger-icon.png');
     background-size: 50px;
+    min-width: 30px;
+    min-height: 30px;
     background-repeat: no-repeat;
     background-size: contain;
-    margin-left: 5px;
+    margin-left: 15px;
+  }
+
+  .burger-menu-mobile a {
+    display: none;
   }
 
   .burger-menu-mobile:hover,
   .burger-menu-mobile:hover a {
     background-image: none;
     display: block;
+    padding: 10px;
   }
 
   /* Dropdown, animaciones y demás */
   .dropdown {
     display: flex;
     flex-direction: column;
-    padding: 0px 10px;
+    padding: 5px;
     position: absolute;
     transform: translateX(-6em);
   }
@@ -74,12 +85,8 @@ nav {
     border-top: none;
   }
 
-  .dropdown a {
-    margin: 7px;
-  }
-
   .burger-menu-mobile:hover .dropdown {
-    transform: translateX(-0.5em);
+    transform: translateX(-2.2em);
     transition: all 0.3s ease-in;
   }
 }
