@@ -46,7 +46,6 @@ const name = ref(null)
 const username = ref(null)
 const email = ref(null)
 const password = ref(null)
-const submit = ref(null)
 
 // Se guarda la info en local Storage como un string. Para consumirla tendré que parsearla con el método "getItemFromStorage"
 const handleSubmit = (event: Event) => {

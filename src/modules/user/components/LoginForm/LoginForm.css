@@ -49,6 +49,11 @@ input:focus {
   border-color: #4fc3f7;
 }
 
+/* Si hay errores... */
+.error-warning {
+  background-color: red;
+}
+
 /* Submit */
 #submit {
   display: block;
