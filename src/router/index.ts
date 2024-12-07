@@ -12,6 +12,7 @@ const router = createRouter({
     {
       path: '/training',
       name: 'training',
+      // Las rutas que en el parámetro reciben una función anónima con el componente a renderizar hacen lazy-loading de gratis.
       component: () => import('@/modules/training/views/TrainingView.vue'),
     },
     {
@@ -23,14 +24,20 @@ const router = createRouter({
       path: '/auth',
       name: 'auth',
       component: () => import('@/modules/user/views/AuthenticationView.vue'),
+      // Si el usuario termina en la ruta "/auth" simplemente, le redirijo a login automáticamente
+      redirect: { name: 'login' },
+      /*
+      Estas rutas saldrán siempre después de la "/auth/", dependiendo del caso de uso.
+      Nótese como las hijas no necesita declarar el "/" al principio de path
+      */
       children: [
         {
-          path: '/register',
+          path: 'register',
           name: 'register',
           component: () => import('@/modules/user/components/RegisterForm/RegisterForm.vue'),
         },
         {
-          path: '/login',
+          path: 'login',
           name: 'login',
           component: () => import('@/modules/user/components/LoginForm/LoginForm.vue'),
         },
