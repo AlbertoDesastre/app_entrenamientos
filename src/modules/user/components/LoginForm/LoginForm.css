@@ -1,0 +1,92 @@
+/* Estilos generales*/
+form {
+  background-color: #f5e663;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Fieldset y legends */
+fieldset {
+  border: 2px solid #032b43;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+legend {
+  color: #032b43;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+/* Labels e inputs */
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #032b43;
+}
+
+input {
+  padding: 10px;
+  border: 2px solid #032b43;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-size: 1em;
+  color: #032b43;
+  background-color: #fff;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4fc3f7;
+}
+
+/* Si hay errores... */
+.error-warning {
+  background-color: red;
+}
+
+/* Submit */
+#submit {
+  display: block;
+  background-color: #032b43;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px auto 0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#submit:hover {
+  background-color: #4fc3f7;
+}
+
+#submit:active {
+  background-color: #0288d1;
+}
+
+@media (max-width: 720px) {
+  form {
+    padding: 15px;
+  }
+
+  input {
+    font-size: 0.9em;
+  }
+
+  #submit {
+    font-size: 1em;
+  }
+}
