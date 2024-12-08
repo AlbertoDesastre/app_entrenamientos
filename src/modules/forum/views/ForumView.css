@@ -1,0 +1,9 @@
+.forum-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.comments-container {
+  width: 100%;
+  max-width: 1200px;
+}

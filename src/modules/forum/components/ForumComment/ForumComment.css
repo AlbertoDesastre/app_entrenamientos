@@ -1,0 +1,50 @@
+.forum-comment {
+  /* Paso a display grid, que me permite manipular cuadrículas mucho más fácil que con flexbox */
+  display: grid;
+  /* La primera columna la reservo para la imagen. La otra es para todo el comentario. */
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: auto auto;
+  min-width: 300px;
+  max-width: 1000px;
+  margin: 6px;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.forum-comment img {
+  /* 
+  Esto hace que la imagen ocupe toda la columna. 
+  Así separo una columna para el avatar y otra para el resto del comentario 
+  */
+  grid-row: span 2;
+  width: 70px;
+  height: 70px;
+  align-self: center;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+
+.forum-comment footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.forum-comment footer p:first-child {
+  font-weight: bold;
+}
+
+.forum-comment footer p:last-child {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.comment {
+  line-height: 1.2;
+}
