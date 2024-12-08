@@ -66,7 +66,7 @@ Asegúrate de tener instalados:
 ### 2️⃣ Clonar el Repositorio
 
 ```bash
-git clone https://github.com/tu_usuario/app-entrenamientos.git
+git clone https://github.com/AlbertoDesastre/app-entrenamientos.git
 cd app-entrenamientos
 ```
 
