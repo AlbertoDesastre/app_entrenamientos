@@ -1,9 +1,24 @@
+/* Dimensiones generales para TODO el Foro */
 .forum-wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin: 0px 5px;
 }
 
+.add-comment-wrapper,
 .comments-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
+}
+/* Estilos para Sección de añadir comentario */
+
+.add-comment-wrapper {
+  margin-bottom: 5px;
+}
+
+/* Estilo para Comentarios */
+.comments-container li {
+  margin: 5px 0px;
 }

@@ -5,8 +5,7 @@
   grid-template-columns: 80px 1fr;
   grid-template-rows: auto auto;
   min-width: 300px;
-  max-width: 1000px;
-  margin: 6px;
+  width: 100%;
   gap: 8px;
   padding: 8px;
   border: 1px solid #ccc;

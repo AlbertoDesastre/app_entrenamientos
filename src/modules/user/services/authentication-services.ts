@@ -1,4 +1,8 @@
-import { deleteItemInStorage, saveInStorage } from '@/modules/common/services/localStorageService'
+import {
+  deleteItemInStorage,
+  getItemFromStorage,
+  saveInStorage,
+} from '@/modules/common/services/localStorageService'
 import type { User } from '../types'
 
 const login = () => {
@@ -21,4 +25,21 @@ const isPasswordRight = ({ user, password }: { user: User; password: string | nu
   return false
 }
 
-export { login, logoff, userExists, isPasswordRight }
+/* Esta función es feísima y caótica. Ayuda. */
+const isSessionActive = (): boolean => {
+  let session
+
+  try {
+    session = getItemFromStorage({ name: 'active-session' })
+  } catch (error: unknown) {
+    console.error('There is no active session for this user. ' + error)
+  }
+
+  if (!session) {
+    return false
+  } else {
+    return true
+  }
+}
+
+export { login, logoff, userExists, isPasswordRight, isSessionActive }
