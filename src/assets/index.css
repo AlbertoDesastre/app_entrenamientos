@@ -12,3 +12,23 @@
 li {
   list-style: none;
 }
+
+input.call-to-action,
+button.call-to-action {
+  background-color: #3f88c5;
+  color: #fffaff;
+  font-weight: 600;
+  padding: 12px 15px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  border: none;
+}
+
+input.call-to-action:hover,
+button.call-to-action:hover {
+  background-color: #3476ac;
+  /* Unas animaciones simples pero bonitas. Se levanta el botón y aparece una pequeña sombra al hacer hover */
+  transition: all 0.15s ease-in;
+  transform: translateY(-0.3em);
+  box-shadow: rgba(245, 230, 99, 0.2) 0px 2px 12px;
+}
