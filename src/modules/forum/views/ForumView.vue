@@ -4,7 +4,7 @@
 
   <section class="forum-wrapper">
     <AddComment
-      :active-session="true"
+      :active-session="isSessionActive()"
       :username="'albertitoo'"
       :user-avatar="'https://via.placeholder.com/80'"
       :add-new-comment="addNewComment"
@@ -34,6 +34,7 @@
 import type { UserComment } from '../types'
 import ForumComment from '../components/ForumComment/ForumComment.vue'
 import AddComment from '../components/AddComment/AddComment.vue'
+import { isSessionActive } from '@/modules/user/services/authentication-services'
 import './ForumView.css'
 
 import { ref } from 'vue'

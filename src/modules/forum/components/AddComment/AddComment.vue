@@ -13,8 +13,25 @@
     </form>
 
     <!-- Si el usuario no inicia sesión se le avisa de que no puede escribir un comentario -->
-    <article v-else class="not-allowed-to-comment-layout">
-      <h3>Inicia sesión guapetón!!!</h3>
+    <article v-else class="disallowed-commentary">
+      <h2>
+        Para comentar en el foro primero tienes que <RouterLink :to="{ name: 'login' }">iniciar sesión</RouterLink>
+      </h2>
+      <div class="interface-blocker"></div>
+      <form id="add-comment-form" @submit="(e) => e.preventDefault()">
+        <article class="user-preview">
+          <p>¡Tú!</p>
+          <img :src="userAvatar" />
+        </article>
+        <label for="comment">
+          <textarea
+            id="comment"
+            type="text"
+            placeholder="Me encanta esta app, pero yo añadiría más opciones..."
+          ></textarea>
+        </label>
+        <input class="call-to-action" ref="submit" id="submit" type="submit" value="Añadir tu comentario" />
+      </form>
     </article>
   </section>
 </template>

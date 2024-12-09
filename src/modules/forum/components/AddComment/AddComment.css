@@ -59,4 +59,55 @@
   margin-top: 5px;
 }
 
-/* Maquetado para el visual alternativo */
+/* Maquetado para cuando comentar no e suna opción*/
+
+.disallowed-commentary {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Asegúrate de que este contenedor tenga la altura necesaria */
+}
+
+/* Luz, me he líado mucho con este CSS para lograr el efecto visual que se ve.
+¿No hay una manera más simple de colocar los elementos o conseguir el mismo efecto? */
+.disallowed-commentary div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(227, 231, 16, 0.5);
+  z-index: 9;
+}
+
+.disallowed-commentary h2 {
+  position: absolute;
+  font-size: 2rem;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.disallowed-commentary a {
+  color: darkgray;
+}
+
+.disallowed-commentary a:hover {
+  text-decoration: underline;
+}
+
+.disallowed-commentary #add-comment-form .user-preview,
+.disallowed-commentary #add-comment-form input {
+  background: gray;
+}
+
+.disallowed-commentary #add-comment-form input {
+  font-weight: normal;
+}
+.disallowed-commentary #add-comment-form input:hover {
+  background: gray;
+  transition: none;
+  transform: none;
+}
+
+.disallowed-commentary #add-comment-form textarea {
+  font-weight: normal;
+}
