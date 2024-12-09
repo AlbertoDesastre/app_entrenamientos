@@ -56,7 +56,7 @@ const handleSubmit = (event: Event) => {
   }
 
   props.addNewComment({ comment })
-  clearComment()
+  clearTextarea()
 }
 
 const getFullDate = () => {
@@ -66,7 +66,7 @@ const getFullDate = () => {
   return creationDate
 }
 
-const clearComment = () => {
+const clearTextarea = () => {
   commentText.value = ''
 }
 </script>
