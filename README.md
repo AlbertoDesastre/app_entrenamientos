@@ -102,7 +102,7 @@ Este proyecto está distribuido bajo la **Licencia MIT**. Esto significa que tie
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Autor 
 
 **[Alberto Armas]**
 
