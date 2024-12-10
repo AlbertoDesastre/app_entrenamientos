@@ -67,7 +67,7 @@ Asegúrate de tener instalados:
 
 ```bash
 git clone https://github.com/AlbertoDesastre/app-entrenamientos.git
-cd app-entrenamientos
+cd app-entrenamientos 
 ```
 
 ### 3️⃣ Instalar Dependencias
