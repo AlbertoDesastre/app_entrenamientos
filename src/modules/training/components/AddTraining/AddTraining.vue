@@ -1,20 +1,60 @@
 <template>
   <!-- En vez de que haga un submit normal le pongo mi propio evento, para la lógica de guardar el usuario el localStorage -->
   <form id="add-training-form" @submit="handleSubmit">
-    <label for="training-type"> Tipo de entrenamiento: </label>
-    <input v-model="trainingType" id="training-type" type="select" placeholder="Tipo de entrenamiento..." />
+    <fieldset>
+      <legend>Tipo de entrenamiento:</legend>
 
-    <label for="distance"> Distancia recorrida: </label>
-    <input v-model="distance" id="timing" type="number" required />
+      <!-- Por defecto dejaré marcado el entrenamiento de resistencia, para impedir guardar un entrenamiento sin tipo nada más visitar la página -->
+      <label for="training-type" class="colorful-tag resistance">
+        Resistencia:
+        <input
+          v-model="trainingType"
+          type="radio"
+          id="training-type-resistencia"
+          name="training-type"
+          value="Resistencia"
+          checked
+      /></label>
 
-    <label for="timing"> Duración de entreno: </label>
-    <input v-model="timing" id="timing" type="number" required />
+      <label for="training-type" class="colorful-tag speed">
+        Contrareloj:
+        <input
+          v-model="trainingType"
+          type="radio"
+          id="training-type-contrareloj"
+          name="training-type"
+          value="Contrareloj"
+      /></label>
+    </fieldset>
 
-    <label for="date"> Completado el día: </label>
-    <input v-model="date" id="date" type="date" required />
+    <label for="distance">
+      <input v-model="distance" id="distance" type="number" required placeholder="Distancia recorrida en km..." />
+    </label>
 
-    <label for="comment"> Comentarios: </label>
-    <textarea v-model="comment" id="comment" type="text"></textarea>
+    <label for="timing">
+      <input
+        v-model="timing"
+        id="timing"
+        type="number"
+        required
+        placeholder="Duración del entreno en minutos..."
+      />
+    </label>
+
+    <label for="date">
+      Completado el día: <input v-model="date" id="date" type="date" required placeholder="" />
+    </label>
+
+    <label for="comment"
+      >Comentarios
+      <textarea
+        v-model="comment"
+        id="comment"
+        type="text"
+        placeholder="Hoy me enfoqué en cambios de ritmo y..."
+        maxlength="150"
+      ></textarea>
+    </label>
 
     <input class="call-to-action" ref="submit" id="submit" type="submit" value="¡Añadir entreno!" />
   </form>
@@ -23,6 +63,7 @@
 <script setup lang="ts">
 import type { Training, TrainingType } from '../../types'
 import './AddTraining.css'
+import '@/assets/index.css'
 
 import { ref } from 'vue'
 

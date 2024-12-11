@@ -1,6 +1,8 @@
+/* Estilos de TODA la vista. */
 .training-view {
   display: flex;
   justify-content: center;
+  margin: 0px 5px;
 }
 
 .training-wrapper {
@@ -15,6 +17,7 @@
   width: 100%;
 }
 
+/* Separación entre entrenamientos */
 .trainings-container li {
   margin: 10px 0px;
 }
