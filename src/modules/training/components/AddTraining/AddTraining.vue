@@ -1,17 +1,22 @@
 <template>
   <!-- En vez de que haga un submit normal le pongo mi propio evento, para la lógica de guardar el usuario el localStorage -->
   <form id="add-training-form" @submit="handleSubmit">
-    <label for="training-type">
-      Tipo de entrenamiento: <input v-model="trainingType" id="training-type" type="select" />
-    </label>
-    <label for="distance"> <input v-model="distance" id="timing" type="number" required /> </label>
-    <label for="timing">
-      Duración de entreno: <input v-model="timing" id="timing" type="number" required />
-    </label>
-    <label for="date"> Completado el día: <input v-model="date" id="date" type="date" required /> </label>
-    <label for="comment"> Comentarios: <input v-model="comment" id="comment" type="text" /> </label>
+    <label for="training-type"> Tipo de entrenamiento: </label>
+    <input v-model="trainingType" id="training-type" type="select" placeholder="Tipo de entrenamiento..." />
 
-    <input ref="submit" id="submit" type="submit" />
+    <label for="distance"> Distancia recorrida: </label>
+    <input v-model="distance" id="timing" type="number" required />
+
+    <label for="timing"> Duración de entreno: </label>
+    <input v-model="timing" id="timing" type="number" required />
+
+    <label for="date"> Completado el día: </label>
+    <input v-model="date" id="date" type="date" required />
+
+    <label for="comment"> Comentarios: </label>
+    <textarea v-model="comment" id="comment" type="text"></textarea>
+
+    <input class="call-to-action" ref="submit" id="submit" type="submit" value="¡Añadir entreno!" />
   </form>
 </template>
 

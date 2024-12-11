@@ -1,0 +1,20 @@
+.training-view {
+  display: flex;
+  justify-content: center;
+}
+
+.training-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.trainings-container {
+  width: 100%;
+}
+
+.trainings-container li {
+  margin: 10px 0px;
+}

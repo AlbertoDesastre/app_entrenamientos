@@ -1,0 +1,47 @@
+/* Form */
+#add-training-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 50px);
+  align-items: center;
+  max-height: fit-content;
+  max-width: 320px;
+  background-color: #2d76bf;
+  padding: 16px;
+  gap: 16px;
+}
+
+/* Todos los inputs que no son el submit */
+#add-training-form input:not(#submit) {
+  max-width: 170px;
+  height: 30px;
+}
+
+#add-training-form input:not(#submit) {
+  padding: 10px;
+  border: 2px solid #032b43;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-size: 1em;
+  color: #032b43;
+  background-color: #fff;
+  transition: border-color 0.3s ease-in-out;
+}
+
+#add-training-form input:not(#submit):focus {
+  outline: none;
+  border-color: #4fc3f7;
+}
+
+/* Submit */
+#add-training-form #submit {
+  grid-column: 2;
+  height: fit-content;
+  background-color: #fc5130;
+  color: white;
+}
+
+#add-training-form #submit:hover {
+  background-color: #ff2a00;
+  box-shadow: #fb2a00;
+}
