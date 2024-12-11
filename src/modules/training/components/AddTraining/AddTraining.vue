@@ -13,7 +13,6 @@
           id="training-type-resistencia"
           name="training-type"
           value="Resistencia"
-          checked
       /></label>
 
       <label for="training-type" class="colorful-tag speed">
@@ -76,7 +75,7 @@ const props = defineProps<Props>()
 // Inicio todas las referencias reactivas, que luego son las que se utilizan para guardar fácilmente la información del formulario
 /* Luz, como puedo hacer para inicializar todas las referencias con valor "null" y que luego no sea un cristo trabajar con tipos?
 Lo pregunto en el caso de armar un objeto de tipo Training, que al inicializar como null, me dice que el atributo x de Training no puede ser null... */
-const trainingType = ref('')
+const trainingType = ref('Resistencia')
 const distance = ref<null | number>(null)
 const timing = ref<null | number>(null)
 const date = ref('')
@@ -93,6 +92,8 @@ const handleSubmit = (event: Event) => {
     date: date.value,
     comment: comment.value,
   }
+
+  console.log(training)
   props.saveTraining({ training })
 }
 </script>
