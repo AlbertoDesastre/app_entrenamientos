@@ -66,3 +66,47 @@
   background-color: #ff2a00;
   box-shadow: #fb2a00;
 }
+
+@media screen and (max-width: 780px) {
+  #add-training-form {
+    align-items: center;
+    height: fit-content;
+  }
+
+  /* Si no haces esto los inputs no se pueden poner en el centro con un tamaño igual entre ellos */
+  #add-training-form label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #add-training-form label.colorful-tag {
+    text-align: center;
+    align-items: center;
+  }
+
+  #add-training-form input:not(#submit),
+  #add-training-form textarea {
+    min-width: 400px;
+    max-height: 70px;
+  }
+
+  #add-training-form label.colorful-tag,
+  #add-training-form label.colorful-tag input:not(#submit) {
+    min-width: 0px;
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  #add-training-form input:not(#submit),
+  #add-training-form textarea {
+    min-width: 280px;
+    max-height: 70px;
+  }
+
+  #add-training-form label.colorful-tag,
+  #add-training-form label.colorful-tag input:not(#submit) {
+    min-width: 0px;
+    width: 150px;
+  }
+}

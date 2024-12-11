@@ -21,3 +21,20 @@
 .trainings-container li {
   margin: 10px 0px;
 }
+
+@media screen and (max-width: 780px) {
+  .training-wrapper {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* Ajusto solo el ancho del Form. 
+  El tema de los inputs y su distribución al ser más concretos se hace en su componente */
+  #add-training-form {
+    min-width: 330px;
+    /* Parece raro, pero como en la versión desktop el valor de "max-width" es de solo 1200px,
+    para poder agarrar un "width" del 80% necesito volver a decirle que el max es del 100% */
+    max-width: 100%;
+    width: 80%;
+  }
+}
