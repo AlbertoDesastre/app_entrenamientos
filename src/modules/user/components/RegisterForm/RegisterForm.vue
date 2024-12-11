@@ -52,7 +52,7 @@ const handleSubmit = (event: Event) => {
   event.preventDefault()
 
   saveInStorage({
-    name: 'user-info',
+    name: 'user-info-' + username.value,
     data: JSON.stringify({
       age: age.value,
       height: height.value,
@@ -64,6 +64,6 @@ const handleSubmit = (event: Event) => {
     }),
   })
 
-  router.push({ name: 'home' })
+  router.push({ name: 'login' })
 }
 </script>

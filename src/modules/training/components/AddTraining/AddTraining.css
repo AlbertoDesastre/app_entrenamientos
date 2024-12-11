@@ -1,0 +1,113 @@
+/* Form */
+#add-training-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  height: 470px;
+  background-color: #2d76bf;
+  padding: 16px;
+  gap: 6px;
+}
+
+#add-training-form label,
+#add-training-form legend {
+  font-size: 1rem;
+
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#add-training-form fieldset {
+  border: none;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  gap: 0.5rem;
+}
+
+#add-training-form fieldset label {
+  margin-top: 5px;
+}
+
+/* Todos los inputs que no son el submit */
+#add-training-form input:not(#submit) {
+  width: 100%;
+  height: 30px;
+}
+
+#add-training-form input:not(#submit),
+#add-training-form textarea {
+  padding: 10px;
+  border: 2px solid #032b43;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-size: 0.9em;
+  width: 100%;
+  color: #032b43;
+  background-color: #fff;
+  transition: border-color 0.3s ease-in-out;
+}
+#add-training-form textarea {
+  height: 100px;
+}
+
+#add-training-form input:not(#submit):focus,
+#add-training-form textarea:focus {
+  outline: none;
+  border-color: #4fc3f7;
+}
+
+/* Submit */
+#add-training-form #submit {
+  background-color: #fc5130;
+  color: white;
+}
+
+#add-training-form #submit:hover {
+  background-color: #ff2a00;
+  box-shadow: #fb2a00;
+}
+
+@media screen and (max-width: 780px) {
+  #add-training-form {
+    align-items: center;
+    height: fit-content;
+  }
+
+  /* Si no haces esto los inputs no se pueden poner en el centro con un tamaño igual entre ellos */
+  #add-training-form label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #add-training-form label.colorful-tag {
+    text-align: center;
+    align-items: center;
+  }
+
+  #add-training-form input:not(#submit),
+  #add-training-form textarea {
+    min-width: 400px;
+    max-height: 70px;
+  }
+
+  #add-training-form label.colorful-tag,
+  #add-training-form label.colorful-tag input:not(#submit) {
+    min-width: 0px;
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  #add-training-form input:not(#submit),
+  #add-training-form textarea {
+    min-width: 280px;
+    max-height: 70px;
+  }
+
+  #add-training-form label.colorful-tag,
+  #add-training-form label.colorful-tag input:not(#submit) {
+    min-width: 0px;
+    width: 150px;
+  }
+}

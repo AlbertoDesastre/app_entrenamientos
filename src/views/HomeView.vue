@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import RegisterForm from '@/modules/user/components/RegisterForm/RegisterForm.vue'
+</script>
+
 <template>
-  <h1>This is my Home View!</h1>
+  <RegisterForm />
 </template>

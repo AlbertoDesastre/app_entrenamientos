@@ -44,7 +44,7 @@ const handleSubmit = (event: Event) => {
 
   try {
     /* OJO!! Si el código peta por algún sitio lo hará inmediatamente aquí abajo y lo atrapará el catch.*/
-    const data = getItemFromStorage({ name: 'user-info' })
+    const data = getItemFromStorage({ name: 'user-info-' + username.value })
     const user: User = JSON.parse(data as string)
 
     // Primero ataco los errores
@@ -57,7 +57,7 @@ const handleSubmit = (event: Event) => {
 
     // Si todo va bien seguimos con el flujo normal
     login()
-    router.push({ name: 'home' })
+    router.push({ name: 'forum' })
   } catch (err) {
     handleError(err)
   }

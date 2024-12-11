@@ -42,4 +42,14 @@ const isSessionActive = (): boolean => {
   }
 }
 
-export { login, logoff, userExists, isPasswordRight, isSessionActive }
+const getUsername = (): string | null => {
+  if (!isSessionActive()) return null
+
+  /* Si la sesión está activa es que hay un usuario guardado si o si. */
+  const data = localStorage.getItem('user-info') as string
+  const { username } = JSON.parse(data) as User
+
+  return username
+}
+
+export { login, logoff, userExists, isPasswordRight, isSessionActive, getUsername }

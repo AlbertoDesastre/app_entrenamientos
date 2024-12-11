@@ -1,7 +1,4 @@
 <template>
-  <h2>Foro</h2>
-  <h3>Comparte tus comentarios sobre la aplicación en este foro. ¡Todo el mundo tiene acceso!</h3>
-
   <section class="forum-wrapper">
     <AddComment
       :active-session="isSessionActive()"

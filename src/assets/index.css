@@ -13,6 +13,7 @@ li {
   list-style: none;
 }
 
+/* Botón/Input apra perfomar acciones como submits */
 input.call-to-action,
 button.call-to-action {
   background-color: #3f88c5;
@@ -31,4 +32,13 @@ button.call-to-action:hover {
   transition: all 0.15s ease-in;
   transform: translateY(-0.3em);
   box-shadow: rgba(245, 230, 99, 0.2) 0px 2px 12px;
+}
+
+/* Etiquetas coloridas */
+
+.colorful-tag {
+  color: white;
+  border-radius: 6px;
+  padding: 6px 8px;
+  border: 2px solid;
 }
